@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="styles/search.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Figtree:wght@300;600&amp;display=swap">
+    
+</head>
+
+<body>
+    <!-- <div class="container"> -->
+        <div  class="search-wrapper">
+            <div class="input-holder">
+                <form action="/search" method="post">
+                    <input type="text" class="search-input" name="yk_search"  placeholder="What's your poison ?" />
+                    <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+                </form>
+            </div>
+            <span class="close" onclick="searchToggle(this, event);"></span>
+        </div>
+
+        <div class="cards-container">
+
+            <%for(var i=0;i<10;i++){%>
+
+                <article class="yk-card">
+                    <div class="article-wrapper">
+                      <figure>
+                        <img src="https://picsum.photos/id/1011/800/450" alt="" />
+                      </figure>
+                      <div class="article-body">
+                        <h2>This is some title</h2>
+                        <!-- <p>
+                          Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
+                        </p> -->
+                        <a href="#" class="read-more">
+                          Read more <span class="sr-only">about this is some title</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+
+            <%}%>
+
+
+              
+        </div>
+    <!-- </div> -->
+    
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>  
+    <script src="js/search.js" charset="utf-8"></script>
+</body>
+
+</html>

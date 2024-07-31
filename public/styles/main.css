@@ -1,7 +1,9 @@
-body{
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* background-position:-60px 0px; */
+body {
+  background-image: url(/images/cocktail5.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position:-60px 0px; */
+  /* background-position: center left; */
 }
 
 /* #myVideo {
@@ -13,29 +15,29 @@ body{
     z-index: -1;
   } */
 
-.container{
-    display:grid;
-    height:100vh;  
-    grid-template-columns: repeat(12,1fr);
-    grid-template-rows: repeat(12,1fr);
-}
-h1{
-    color:white;
-    font-size: 80px;
-    place-self: center;
-    text-shadow: 3px 0 purple, -3px 0 purple, 0 3px purple, 0 -3px purple,
-               1px 1px purple, -1px -1px purple, 1px -1px purple, -1px 1px purple;
-    grid-column-start: 1;
-    grid-column-end: -1;
-    grid-row-start: 6;
-    grid-row-end: 8;
+.container {
+  display: grid;
+  height: 100vh;
+  width:100%;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
 }
 
-.yk-btn-85{
-    grid-column-start: 6;
-    grid-column-end: 8;
-    grid-row-start: 9;
-    grid-row-end: 10;
+h1 {
+  place-self: center;
+  /* text-shadow: 3px 0 purple, -3px 0 purple, 0 3px purple, 0 -3px purple,
+    1px 1px purple, -1px -1px purple, 1px -1px purple, -1px 1px purple; */
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.yk-btn-85 {
+  grid-column-start: 6;
+  grid-column-end: 8;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
 
 /* CSS */
@@ -56,18 +58,16 @@ h1{
 
 .button-85:before {
   content: "";
-  background: linear-gradient(
-    45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
-  );
+  background: linear-gradient(45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000);
   position: absolute;
   top: -2px;
   left: -2px;
@@ -86,9 +86,11 @@ h1{
   0% {
     background-position: 0 0;
   }
+
   50% {
     background-position: 400% 0;
   }
+
   100% {
     background-position: 0 0;
   }
@@ -106,10 +108,105 @@ h1{
   border-radius: 10px;
 }
 
-.yk-btn{
-    display: flex;
-    justify-content: center;
+.yk-btn {
+  display: flex;
+  justify-content: center;
 }
-.yk-click{
-    font-size: 30px;
+
+.yk-click {
+  font-size: 30px;
 }
+
+
+.neonText {
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #bc13fe,
+    0 0 82px #bc13fe,
+    0 0 92px #bc13fe,
+    0 0 102px #bc13fe,
+    0 0 151px #bc13fe;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Sacramento", sans-serif;
+  background-color: #010a01;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2 {
+  text-align: center;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3.5rem;
+  animation: pulsate 1.5s infinite alternate;
+  border: 0.2rem solid #fff;
+  border-radius: 1rem;
+  padding: 20px;
+  box-shadow: 0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe,
+    0 0 2.8rem #bc13fe,
+    inset 0 0 1.3rem #bc13fe;
+}
+h1:hover {
+  font-size: 3.5rem;
+  animation: pulsate 1.5s infinite alternate;
+  border: 0.2rem solid #fff;
+  border-radius: 1rem;
+  padding: 20px;
+  box-shadow: 0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem yellow,
+    0 0 0.8rem yellow,
+    0 0 2.8rem yellow,
+    inset 0 0 1.3rem yellow;
+}
+
+@keyframes pulsate {
+
+  100% {
+
+    text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #bc13fe,
+      0 0 80px #bc13fe,
+      0 0 90px #bc13fe,
+      0 0 100px #bc13fe,
+      0 0 150px #bc13fe;
+
+  }
+
+  0% {
+
+    text-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 10px #bc13fe,
+      0 0 45px #bc13fe,
+      0 0 55px #bc13fe,
+      0 0 70px #bc13fe,
+      0 0 80px #bc13fe;
+
+  }
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+
+a { color: inherit; } 
