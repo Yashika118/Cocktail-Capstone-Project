@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recipe</title>
+    <link rel="stylesheet" href="styles/recipe.css">
+</head>
+<body>
+        <%if(locals.result){%>
+            <div class="container">
+                
+                    <%result.drinks.forEach(element=>{%>
+                        <!-- <img src="<%=element.strDrinkThumb%>" alt="Avatar"> -->
+                            <!-- flip card -->
+                            <div class="flip-card yk-flip-card">
+                                <div class="flip-card-inner">
+                                <div class="flip-card-front yk-card-front">
+                                    <img src="<%=element.strDrinkThumb%>" alt="Avatar">
+                                    <!-- style="width:300px;height:300px;" -->
+                                </div>
+                                <div class="flip-card-back">
+                                    <h1>John Doe</h1>
+                                    <p>Architect & Engineer</p>
+                                    <p>We love that guy</p>
+                                </div>
+                                </div>
+                            </div>
+                            
+                    <% }) %>
+                
+    
+            </div>
+        <%}%>
+</body>
+</html>

@@ -151,7 +151,7 @@ body {
     margin-right:3%;
     display: grid;
     grid-template-columns:repeat(4,1fr);
-    grid-template-rows: repeat(3,1fr);
+    /* grid-template-rows: repeat(6,1fr); */
  }
 
 
@@ -216,6 +216,7 @@ body {
     padding: 0;
     aspect-ratio: 16 / 9;
     overflow: hidden;
+    height:15rem;
   }
   
   .read-more {
@@ -285,6 +286,11 @@ body {
   .yk-card{
     margin:10px;
   }
+
+ .yk-read-btn {
+    border: none;
+    background:none;
+ }
  
 
  
