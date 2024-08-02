@@ -1,9 +1,15 @@
-body {
+/* body {
   background-image: url(/images/cocktail5.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-position:-60px 0px; */
-  /* background-position: center left; */
+
+} */
+
+body {
+  background: url(/images/cocktail5.jpg) no-repeat center center fixed;
+  background-size: cover;
+ 
+  z-index: -1;
 }
 
 /* #myVideo {

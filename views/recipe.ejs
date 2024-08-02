@@ -5,32 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>recipe</title>
     <link rel="stylesheet" href="styles/recipe.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    
 </head>
 <body>
         <%if(locals.result){%>
             <div class="container">
                 
                     <%result.drinks.forEach(element=>{%>
-                        <!-- <img src="<%=element.strDrinkThumb%>" alt="Avatar"> -->
-                            <!-- flip card -->
-                            <div class="flip-card yk-flip-card">
-                                <div class="flip-card-inner">
-                                <div class="flip-card-front yk-card-front">
-                                    <img src="<%=element.strDrinkThumb%>" alt="Avatar">
-                                    <!-- style="width:300px;height:300px;" -->
-                                </div>
-                                <div class="flip-card-back">
-                                    <h1>John Doe</h1>
-                                    <p>Architect & Engineer</p>
-                                    <p>We love that guy</p>
-                                </div>
-                                </div>
-                            </div>
+                        
+                        <div class="yk-img yk-divs">
+                            <h1><%=element.strDrink%></h1>
+                            <img src="<%=element.strDrinkThumb%>" height="400px" width="400px">
+                        </div>
+                        <div class="yk-details yk-divs">
+                            
+                            <ul>
+                                <li>
+                                    Category : <%=element.strCategory%> .
+                                </li>
+                                <li>
+                                    Instructions : <%=element.strInstructions%>
+                                </li>
+                                <li>
+                                    <%=element.strIngredient1%>
+                                </li>
+                                
+
+                            </ul>
+                        </div>
                             
                     <% }) %>
                 
     
             </div>
         <%}%>
+
+
+
+        
 </body>
 </html>
