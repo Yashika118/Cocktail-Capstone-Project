@@ -24,15 +24,43 @@ img{
 }
 .yk-img{
     display:grid;
+    grid-template-rows: auto 80%;
 }
-h1{
+.second{
     place-self: center;
-    font-size: 70px;
-    color:rgb(19, 224, 87);
-    font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-weight: 20px;
+    text-align: center;
+    font-size: 50px;
+    color:crimson;
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
     font-style: normal;
-}   
+}  
+
+.first{
+    margin-top:70px;
+    margin-bottom: 40px;
+    margin-left:20px;
+    margin-right:20px;
+    text-align: center;
+    font-size: 50px;
+    color:crimson;
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.yk-text{
+    margin:30px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+h2{
+    font-family:'Times New Roman', Times, serif;
+    font-weight:500;
+}
+span{
+    font-weight:bold;
+    font-size: 30px;
+}
+  
 
 

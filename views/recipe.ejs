@@ -7,37 +7,40 @@
     <link rel="stylesheet" href="styles/recipe.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lobster&family=Pacifico&display=swap" rel="stylesheet">
     
 </head>
 <body>
         <%if(locals.result){%>
             <div class="container">
                 
-                    <%result.drinks.forEach(element=>{%>
+                    
                         
-                        <div class="yk-img yk-divs">
-                            <h1><%=element.strDrink%></h1>
-                            <img src="<%=element.strDrinkThumb%>" height="400px" width="400px">
-                        </div>
-                        <div class="yk-details yk-divs">
+                <div class="yk-img yk-divs">
+                    <h1 class="first"><%=result.drinks[0].strDrink%></h1>
+                    <img src="<%=result.drinks[0].strDrinkThumb%>" height="400px" width="400px">
+                </div>
+                <div class="yk-details yk-divs">
+                   <div class="yk-text">
+                    <h1 class="second">Description</h1>
+                    <h2><span>Category :</span> <%=result.drinks[0].strCategory%> </h2>
+                    <h2><span>Ingredients :</span>  </h2>
+                    <ul>
+                        <%ingredients.forEach(i=>{%>
+                            <li>
+                                <h2><%=i%></h2>
+                            </li>
+                            <%})%>
                             
-                            <ul>
-                                <li>
-                                    Category : <%=element.strCategory%> .
-                                </li>
-                                <li>
-                                    Instructions : <%=element.strInstructions%>
-                                </li>
-                                <li>
-                                    <%=element.strIngredient1%>
-                                </li>
-                                
+                            
+                    </ul>
+                    <h2><span>Instructions :</span> <%=result.drinks[0].strInstructions%> </h2>
+                   </div>
 
-                            </ul>
-                        </div>
+
+                </div>
                             
-                    <% }) %>
+                   
                 
     
             </div>

@@ -14,7 +14,6 @@ body {
      top:15%;
      left:50%;
  }
- .search-wrapper.active {}
  
  .search-wrapper .input-holder {    
      height: 70px;
@@ -231,23 +230,7 @@ body {
   }
   
   
-  /* *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-   */
-
-
-  /* body {
-    margin: 0;
-    padding: 48px 0;
-    font-family: "Figtree", sans-serif;
-    font-size: 1.2rem;
-    line-height: 1.6rem;
-    background-image: linear-gradient(45deg, #adadad, #848484);
-    min-height: 100vh;
-  } */
+  
   
   .article-body {
     padding: 24px;
@@ -290,6 +273,10 @@ body {
  .yk-read-btn {
     border: none;
     background:none;
+ }
+
+ .search-img{
+    margin-left: 45%;
  }
  
 

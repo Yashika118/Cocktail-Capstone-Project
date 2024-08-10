@@ -59,7 +59,24 @@ app.post("/recipe",async(req,res)=>{
         const response=await axios.get(`${API_URL}/lookup.php?i=${id}`);
         const result=response.data;
         // console.log(result);
-        res.render("recipe.ejs",{result:result});
+        let ingredients=[];
+        let drink=result.drinks[0];
+        for(var i=1;i<16;i++){
+          if(drink["strIngredient"+i]===null){
+            break;
+          }
+          if(drink["strMeasure"+i]===null){
+            drink["strMeasure"+i]="one";
+          }
+          const element=drink["strMeasure"+i]+" - "+drink["strIngredient"+i];
+          ingredients.push(element);
+        }
+
+        // console.log(ingredients);
+        res.render("recipe.ejs",{
+          result:result,
+          ingredients:ingredients,
+        });
         
       }catch (error) {
         console.error("Failed to make request:", error.message);
